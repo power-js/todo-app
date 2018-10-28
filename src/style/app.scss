@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+@import "reset";
+
+body {
+  background: #fff;
+  font-family: "Roboto";
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeLegibility;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.blue {
+  color: #3063d7;
+}
+
+.red {
+  color: #c00;
+}
+
+#todos {
+  margin: 10% auto;
+  width: 400px;
+
+  > input {
+    border: 0;
+    border-bottom: 2px solid #ddd;
+    font-size: 14px;
+    padding: 30px 5px 10px;
+    transition: all .3s ease-in-out;
+    width: 100%;
+
+    &:focus {
+      border-bottom-color: #419bf9;
+    }
+  }
+
+  ul {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(#000, .1);
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+
+    &.hide {
+      display: none;
+    }
+
+    li {
+      align-items: center;
+      display: flex;
+      padding: 15px;
+
+      &:first-child {
+        border-radius: 4px 4px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 4px 4px;
+      }
+
+      &:hover {
+        background: #f5f5f5;
+
+        > button {
+          visibility: visible;
+        }
+      }
+
+      > label {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        flex: 1;
+
+        > span {
+          flex: 1;
+          padding-left: 10px;
+        }
+
+        > input {
+          appearance: none;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-radius: 100%;
+          height: 14px;
+          width: 14px;
+
+          &:checked {
+            background-color: #419bf9;
+            border-color: #419bf9;
+          }
+        }
+
+        > input:checked + span {
+          color: #999;
+          font-style: italic;
+          text-decoration: line-through;
+        }
+      }
+
+      > button {
+        background-color: transparent;
+        border: 0;
+        border-radius: 3px;
+        color: #999;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 0;
+        visibility: hidden;
+
+        &:hover {
+          color: #c00;
+        }
+      }
+    }
+  }
+}
