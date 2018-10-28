@@ -1,7 +1,8 @@
 /**
  *
- * All of your custom variables to should go here. This is where you control the look of your app. Any new styling
- * should reference something defined here so you have a consistent look and feel.
+ * All of your custom variables to should go here. This is where you control the visual aspects of your app.
+ * Any new styling should reference something defined here so you maintain a consistent look and
+ * feel across your components, views, etc... (ex: border color, text color, hover states, active states).
  *
  * Ex:
  * color: $text-color;
@@ -22,7 +23,7 @@ $gray-lighter:                    #ddd;
 $gray-lightest:                   #f0f0f0;
 $gray-lightest-alt:               #f5f5f5;
 
-$blue:                            #396fd7;
+$blue:                            #3063d7;
 $red:                             #f76060;
 $white:                           #fff;
 
