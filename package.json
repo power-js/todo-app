@@ -1,21 +1,19 @@
 {
   "name": "powerjs-todo",
   "version": "0.0.1",
-  "description": "A simple Todo app using Power JS",
+  "description": "Simple Todo app created with PowerJS",
   "main": "src/index.js",
   "scripts": {
     "precommit": "lint-staged",
     "start": "webpack-dev-server --mode development --open",
     "server": "babel-watch scripts/server",
-    "deploy": "node scripts/deploy.js",
-    "production": "babel-node scripts/server",
     "test": "jest --coverage",
     "test:unit": "jest --coverage",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage && open ./coverage/lcov-report/index.html",
     "postinstall": "npm run build",
     "eslint": "eslint --fix .",
-    "build": "webpack -p --mode production"
+    "build": "webpack -p"
   },
   "jest": {
     "testRegex": "src/.*\\.test\\.js$",

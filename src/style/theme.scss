@@ -1,0 +1,12 @@
+// Custom variables
+@import "variables";
+
+// CSS reset
+@import "reset";
+
+// If you decided to include bootstrap then remove the reset import and delete the _reset.scss partial
+// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Base
+@import "scaffolding";
+@import "type";

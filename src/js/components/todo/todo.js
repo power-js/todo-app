@@ -1,23 +1,23 @@
 import { Component, h, render } from 'powerjs-lib';
 
+import './todo.scss';
+
 class Todo extends Component {
-  getInitialState() {
+  constructor(props) {
+    super(props);
+
     const todos = [];
 
     for (var i = 1; i <= 10; i++) {
       todos.push(`item ${i}`);
     }
 
-    return {
+    this.addTodo = this.addTodo.bind(this);
+
+    this.state = {
       todos,
       hide: false
-    }
-  }
-
-  constructor(props) {
-    super(props);
-
-    this.addTodo = this.addTodo.bind(this);
+    };
   }
 
   addTodo(e) {

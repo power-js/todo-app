@@ -6,12 +6,11 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const devMode = process.env.NODE_ENV !== 'production'
 
-module.exports = {
+module.exports = (env, args) => ({
   devtool: 'source-map',
   output: {
-    filename: 'app.js',
+    filename: args.mode !== 'production' ? 'app.js' : 'app.[hash].js',
   },
   optimization: {
     minimizer: [
@@ -34,8 +33,8 @@ module.exports = {
     }),
     new CompressionPlugin(),
     new MiniCssExtractPlugin({
-      filename: devMode ? 'app.css' : 'app.[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+      filename: args.mode !== 'production' ? 'app.css' : 'app.[hash].css',
+      chunkFilename: args.mode !== 'production' ? '[id].css' : '[id].[hash].css',
     }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
@@ -90,4 +89,4 @@ module.exports = {
       '/api*': 'http://localhost:8181'
     }
   }
-};
+});

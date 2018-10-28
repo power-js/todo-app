@@ -1,0 +1,27 @@
+body {
+  background: $body-bg;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeLegibility;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.blue {
+  color: $blue;
+}
+
+.red {
+  color: $red;
+}
