@@ -1,0 +1,93 @@
+/**
+ *
+ * All of your custom variables to should go here. This is where you control the visual aspects of your app.
+ * Any new styling should reference something defined here so you maintain a consistent look and
+ * feel across your components, views, etc... (ex: border color, text color, hover states, active states).
+ *
+ * Ex:
+ * color: $text-color;
+ * border-radius: $border-radius-base;
+ *
+ */
+
+/*--------------------------
+  Colors
+ --------------------------*/
+
+$gray-darkest:                    #222;
+$gray-darker:                     #555;
+$gray-dark:                       #666;
+$gray:                            #999;
+$gray-light:                      #aaa;
+$gray-lighter:                    #ddd;
+$gray-lightest:                   #f0f0f0;
+$gray-lightest-alt:               #f5f5f5;
+
+$blue:                            #3063d7;
+$black:                           #000;
+$red:                             #f76060;
+$white:                           #fff;
+
+/*--------------------------
+  Scaffolding
+ --------------------------*/
+
+$body-bg:                         $white;
+$text-color:                      $gray-darkest;
+$link:                            #184bab;
+
+/*--------------------------
+  Typography
+ --------------------------*/
+
+$font-family-sans-serif:          "Roboto", "Helvetica Neue", sans-serif;
+$font-family-serif:               Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:           Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-base:                $font-family-sans-serif;
+
+$font-size-base:                  14px;
+
+$font-size-xsmall:                9px;
+$font-size-small:                 10px;
+$font-size-medium:                12px;
+$font-size-large:                 18px;
+$font-size-xlarge:                22px;
+$font-size-xxlarge:               24px;
+$font-size-xxxlarge:              28px;
+$font-size-jumbo:                 32px;
+
+$font-weight-base:                400;
+
+$font-weight-black:               900;
+$font-weight-bold:                700;
+$font-weight-medium:              500;
+$font-weight-light:               300;
+$font-weight-thin:                100;
+
+$line-height-base:                1.428571429; // 20/14
+$line-height-computed:            floor($font-size-base * $line-height-base); // 20px
+
+$headings-font-family:            $font-family-sans-serif;
+$headings-font-weight:            $font-weight-base;
+$headings-line-height:            1.1;
+
+$font-size-h1:                    18px;
+$font-size-h2:                    14px;
+$font-size-h3:                    13px;
+$font-size-h4:                    12px;
+$font-size-h5:                    12px;
+$font-size-h6:                    11px;
+
+$font-weight-h1:                  $font-weight-medium;
+$font-weight-h2:                  $font-weight-medium;
+$font-weight-h3:                  $font-weight-medium;
+$font-weight-h4:                  $font-weight-medium;
+$font-weight-h5:                  $font-weight-base;
+$font-weight-h6:                  $font-weight-base;
+
+/*--------------------------
+  Borders
+ --------------------------*/
+
+$border-color:                   $gray-lighter;
+$border-radius-base:             3px;

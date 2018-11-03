@@ -1,0 +1,7 @@
+{
+  "src/**/*.scss": ["stylelint --config .stylelintrc.json --syntax=scss --fix", "stylelint --config .stylelintrc.json --syntax=scss", "git add"],
+  "src/**/*.js": ["prettier --config .prettierrc.json --write", "git add"],
+  "src/**/*.json": ["prettier --config .prettierrc.json --write", "git add"],
+  "tests/**/*.js": ["prettier --config .prettierrc.json --write", "git add"],
+  "tests/**/*.json": ["prettier --config .prettierrc.json --write", "git add"]
+}
