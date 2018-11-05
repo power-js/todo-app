@@ -1,7 +1,7 @@
 {
   "name": "powerjs-todo",
   "version": "0.0.1",
-  "description": "Simple Todo app created with PowerJS",
+  "description": "A simple Todo app created with PowerJS",
   "main": "src/index.js",
   "scripts": {
     "precommit": "lint-staged",

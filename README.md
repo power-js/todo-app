@@ -1,6 +1,6 @@
 # Simple Todo app
 
-A simple Todo application created with PowerJS. 
+A simple Todo application created with PowerJS.
 
 ## Getting Started
 
