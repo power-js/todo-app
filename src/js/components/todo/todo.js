@@ -24,15 +24,15 @@ class Todo extends Component {
     const key = e.keyCode || e.charCode;
     const target = e.target;
 
-    if(key === 13){
+    if (key === 13) {
       const state = { ...this.state };
-      const todos = [ ...state.todos ];
+      const todos = [...state.todos];
 
-      todos.push({ val: target.value, id: nodeId++ });
+      todos.push({ value: target.value, id: nodeId++ });
 
       state.todos = todos;
 
-      if(state.hide){
+      if (state.hide) {
         state.hide = false;
       }
 
@@ -44,7 +44,7 @@ class Todo extends Component {
 
   removeTodo(todo) {
     const state = { ...this.state };
-    const todos = [ ...state.todos ];
+    const todos = [...state.todos];
 
     const i = todos.indexOf(todo);
 
@@ -52,7 +52,7 @@ class Todo extends Component {
 
     state.todos = todos;
 
-    if(!state.todos.length){
+    if (!state.todos.length) {
       state.hide = true;
     }
 
@@ -62,9 +62,9 @@ class Todo extends Component {
   renderTodos() {
     return this.state.todos.map((todo, index) => (
       <li key={todo.key}>
-        <label htmlFor={`item_${index}`}>
-          <input type="checkbox" id={`item_${index}`} />
-          <span>{todo.val}</span>
+        <label htmlFor={`item_${todo.key}`}>
+          <input type="checkbox" id={`item_${todo.key}`} />
+          <span>{todo.value}</span>
         </label>
         <button onClick={this.removeTodo.bind(this, todo)}>×</button>
       </li>
@@ -80,7 +80,7 @@ class Todo extends Component {
         <input type="text" onKeyUp={this.addTodo} placeholder="What do you need to do today?" />
         <ul className={classes}>{this.renderTodos()}</ul>
       </div>
-    )
+    );
   }
 }
 
