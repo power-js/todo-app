@@ -1,13 +1,15 @@
 import Power, { Component } from '@power-js/core';
 
+let nodeId = 0;
+
 class Todo extends Component {
   constructor(props) {
     super(props);
 
     const todos = [];
 
-    for (let i = 1; i <= 10; i++) {
-      todos.push(`item ${i}`);
+    for (let i = 1; i <= 1000; i++) {
+      todos.push({ val: `item ${i}`, key: `${nodeId++}` });
     }
 
     this.addTodo = this.addTodo.bind(this);
@@ -26,7 +28,7 @@ class Todo extends Component {
       const state = { ...this.state };
       const todos = [ ...state.todos ];
 
-      todos.push(target.value);
+      todos.push({ val: target.value, id: nodeId++ });
 
       state.todos = todos;
 
@@ -40,11 +42,13 @@ class Todo extends Component {
     }
   }
 
-  removeTodo(index) {
+  removeTodo(todo) {
     const state = { ...this.state };
     const todos = [ ...state.todos ];
 
-    todos.splice(index, 1);
+    const i = todos.indexOf(todo);
+
+    todos.splice(i, 1);
 
     state.todos = todos;
 
@@ -57,22 +61,22 @@ class Todo extends Component {
 
   renderTodos() {
     return this.state.todos.map((todo, index) => (
-      <li key={index}>
+      <li key={todo.key}>
         <label htmlFor={`item_${index}`}>
           <input type="checkbox" id={`item_${index}`} />
-          <span>{todo}</span>
+          <span>{todo.val}</span>
         </label>
-        <button onClick={this.removeTodo.bind(this, index)}>×</button>
+        <button onClick={this.removeTodo.bind(this, todo)}>×</button>
       </li>
     ));
   }
 
   render() {
     const classes = this.state.hide ? 'hide' : '';
-
+    const style = { color: this.state.hide ? '#cc0000' : '#000' };
     return (
       <div id="todos">
-        <h1>Todo List</h1>
+        <h1 style={style}>Todo List</h1>
         <input type="text" onKeyUp={this.addTodo} placeholder="What do you need to do today?" />
         <ul className={classes}>{this.renderTodos()}</ul>
       </div>
