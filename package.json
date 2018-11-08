@@ -13,15 +13,13 @@
     "test:coverage": "jest --coverage && open ./coverage/lcov-report/index.html",
     "postinstall": "npm run build",
     "eslint": "eslint --fix .",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "deploy": "gh-pages-deploy -- 'update github pages'"
   },
   "jest": {
     "testRegex": "src/.*\\.test\\.js$",
     "coveragePathIgnorePatterns": [
       "src/test"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
     ],
     "moduleDirectories": [
       "node_modules",
@@ -35,13 +33,20 @@
       "default"
     ]
   },
+  "gh-pages-deploy": {
+    "staticpath": "src",
+    "prep": [
+      "build"
+    ],
+    "commit": "a custom commit message",
+    "noprompt": false
+  },
   "devDependencies": {
     "@babel/core": "^7.0.1",
     "@babel/plugin-transform-react-jsx": "^7.0.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "autoprefixer": "^8.2.0",
-    "aws-sdk": "^2.222.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^9.0.0",
@@ -51,15 +56,11 @@
     "babel-watch": "^2.0.7",
     "compression-webpack-plugin": "^1.1.12",
     "css-loader": "^0.28.7",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "enzyme-to-json": "^3.3.3",
     "eslint": "^4.8.0",
     "eslint-config-prettier": "2.6.0",
     "eslint-import-resolver-webpack": "^0.8.3",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "2.3.1",
     "eslint-plugin-react": "7.4.0",
     "file-loader": "^1.1.3",

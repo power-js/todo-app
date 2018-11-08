@@ -28,7 +28,7 @@ class Todo extends Component {
       const state = { ...this.state };
       const todos = [...state.todos];
 
-      todos.push({ value: target.value, id: nodeId++ });
+      todos.push({ value: target.value, key: nodeId++ });
 
       state.todos = todos;
 
