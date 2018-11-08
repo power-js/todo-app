@@ -9,7 +9,7 @@ class Todo extends Component {
     const todos = [];
 
     for (let i = 1; i <= 1000; i++) {
-      todos.push({ val: `item ${i}`, key: `${nodeId++}` });
+      todos.push({ value: `item ${i}`, key: `${nodeId++}` });
     }
 
     this.addTodo = this.addTodo.bind(this);

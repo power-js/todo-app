@@ -93,6 +93,6 @@
     "webpack-visualizer-plugin": "^0.1.11"
   },
   "dependencies": {
-    "@power-js/core": "latest"
+    "@power-js/core": "0.0.4"
   }
 }
