@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`todo should render the proper html 1`] = `
+<todo
+  power-component="true"
+>
+  <div
+    id="todos"
+    power-id="10"
+  >
+    <h1
+      power-id="1"
+      style="color: rgb(0, 0, 0);"
+    >
+      Todo List
+    </h1>
+    <input
+      placeholder="What do you need to do today?"
+      power-id="2"
+    />
+    <ul
+      class=""
+      power-id="9"
+    >
+      <todoitems
+        power-id="8"
+      >
+        <li
+          key="0"
+          power-id="7"
+        >
+          <label
+            for="item_0"
+            power-id="5"
+          >
+            <input
+              id="item_0"
+              power-id="3"
+              type="checkbox"
+            />
+            <span
+              power-id="4"
+            >
+              item 1
+            </span>
+          </label>
+          <button
+            power-id="6"
+          >
+            ×
+          </button>
+        </li>
+      </todoitems>
+    </ul>
+  </div>
+</todo>
+`;

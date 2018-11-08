@@ -3,4 +3,4 @@ import Todo from './js/components/todo/todo';
 
 import './style/app.scss';
 
-render(<Todo />, document.getElementById('app'));
+render(<Todo total={1000} />, document.getElementById('app'));

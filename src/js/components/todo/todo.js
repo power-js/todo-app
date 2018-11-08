@@ -2,17 +2,33 @@ import Power, { Component } from '@power-js/core';
 
 let nodeId = 0;
 
+const TodoItems = ({ items, onRemove }) => {
+  return items.map((todo, index) => (
+    <li key={todo.key}>
+      <label htmlFor={`item_${todo.key}`}>
+        <input type="checkbox" id={`item_${todo.key}`} />
+        <span>{todo.value}</span>
+      </label>
+      <button onClick={e => onRemove(todo)}>×</button>
+    </li>
+  ));
+};
+
 class Todo extends Component {
   constructor(props) {
     super(props);
 
     const todos = [];
 
-    for (let i = 1; i <= 1000; i++) {
-      todos.push({ value: `item ${i}`, key: `${nodeId++}` });
+    for (let i = 1; i <= props.total; i++) {
+      todos[todos.length] = {
+        value: `item ${i}`,
+        key: `${nodeId++}`
+      };
     }
 
     this.addTodo = this.addTodo.bind(this);
+    this.removeTodo = this.removeTodo.bind(this);
 
     this.state = {
       todos,
@@ -78,7 +94,9 @@ class Todo extends Component {
       <div id="todos">
         <h1 style={style}>Todo List</h1>
         <input type="text" onKeyUp={this.addTodo} placeholder="What do you need to do today?" />
-        <ul className={classes}>{this.renderTodos()}</ul>
+        <ul className={classes}>
+          <TodoItems items={this.state.todos} onRemove={this.removeTodo} />
+        </ul>
       </div>
     );
   }
