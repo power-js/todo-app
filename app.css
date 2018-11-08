@@ -1,1 +1,240 @@
-abbr,address,article,aside,audio,b,blockquote,body,body div,caption,cite,code,dd,del,details,dfn,dl,dt,em,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{background:transparent;border:0;font-size:100%;font-weight:400;margin:0;padding:0;vertical-align:baseline}article,aside,details,figure,footer,header,main,nav,section,summary{display:block}html{-webkit-box-sizing:border-box;box-sizing:border-box;overflow-y:scroll}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}embed,img,object{max-width:100%}ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:" ";content:none}a{background:transparent;font-size:100%;margin:0;padding:0;vertical-align:baseline}table{border-collapse:separate;border-spacing:0}hr{border:0;border-top:1px solid #ccc;display:block;height:1px;margin:1em 0;padding:0}input,select{vertical-align:middle}pre{white-space:pre}code,kbd,pre,samp{font-family:monospace,sans-serif}button,input,select,textarea{margin:0}button,input[type=button]{overflow:visible;width:auto}.clearfix:after{clear:both;content:" ";display:block}body{background:#fff;font-family:Roboto,Helvetica Neue,sans-serif;font-size:14px;margin:0;padding:0}*{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-overflow-scrolling:touch;text-rendering:optimizeLegibility}:focus{outline:0}h1{font-size:18px}h2{font-size:14px}h3{font-size:13px}h4,h5{font-size:12px}h6{font-size:11px}h1,h2,h3,h4{font-weight:500}h5,h6{font-weight:400}small{font-size:10px}#todos{margin:10% auto;width:400px}#todos>input{border:0;border-bottom:2px solid #ddd;font-size:14px;padding:30px 5px 10px;-webkit-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out;width:100%}#todos>input:focus{border-bottom-color:#3063d7}#todos ul{border:1px solid #ddd;border-radius:3px;-webkit-box-shadow:0 1px 2px rgba(0,0,0,.1);box-shadow:0 1px 2px rgba(0,0,0,.1);list-style:none;margin:20px 0 0;padding:0}#todos ul.hide{display:none}#todos ul li{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;padding:15px}#todos ul li:first-child{border-radius:3px 3px 0 0}#todos ul li:last-child{border-radius:0 0 3px 3px}#todos ul li:hover{background:#f5f5f5}#todos ul li:hover>button{visibility:visible}#todos ul li>label{-webkit-box-align:center;-ms-flex-align:center;align-items:center;cursor:pointer;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-ms-flex:1;flex:1}#todos ul li>label>span{-webkit-box-flex:1;-ms-flex:1;flex:1;padding-left:10px}#todos ul li>label>input{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border:1px solid #ddd;border-radius:100%;height:14px;width:14px}#todos ul li>label>input:checked{background-color:#3063d7;border-color:#3063d7}#todos ul li>label>input:checked+span{color:#999;font-style:italic;text-decoration:line-through}#todos ul li>button{background-color:transparent;border:0;border-radius:3px;color:#999;cursor:pointer;font-size:18px;font-weight:700;padding:0;visibility:hidden}#todos ul li>button:hover{color:#f76060}
+/**
+ *
+ * All of your custom variables to should go here. This is where you control the visual aspects of your app.
+ * Any new styling should reference something defined here so you maintain a consistent look and
+ * feel across your components, views, etc... (ex: border color, text color, hover states, active states).
+ *
+ * Ex:
+ * color: $text-color;
+ * border-radius: $border-radius-base;
+ *
+ */
+/*--------------------------
+  Colors
+ --------------------------*/
+/*--------------------------
+  Scaffolding
+ --------------------------*/
+/*--------------------------
+  Typography
+ --------------------------*/
+/*--------------------------
+  Borders
+ --------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong,
+sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header,
+menu, nav, section, time, mark, audio, video, details, summary {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+main, article, aside, figure, footer, header, nav, section, details, summary {
+  display: block; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: scroll; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+img,
+object,
+embed {
+  max-width: 100%; }
+
+ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: " ";
+  content: none; }
+
+a {
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+pre {
+  white-space: pre; }
+
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif; }
+
+button, input, select, textarea {
+  margin: 0; }
+
+button,
+input[type=button] {
+  overflow: visible;
+  width: auto; }
+
+.clearfix:after {
+  clear: both;
+  content: " ";
+  display: block; }
+
+body {
+  background: #fff;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeLegibility; }
+  *:focus {
+    outline: 0; }
+
+h1 {
+  font-size: 18px; }
+
+h2 {
+  font-size: 14px; }
+
+h3 {
+  font-size: 13px; }
+
+h4 {
+  font-size: 12px; }
+
+h5 {
+  font-size: 12px; }
+
+h6 {
+  font-size: 11px; }
+
+h1, h2, h3, h4 {
+  font-weight: 500; }
+
+h5, h6 {
+  font-weight: 400; }
+
+small {
+  font-size: 10px; }
+
+#todos {
+  margin: 10% auto;
+  width: 400px; }
+  #todos > input {
+    border: 0;
+    border-bottom: 2px solid #ddd;
+    font-size: 14px;
+    padding: 30px 5px 10px;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    width: 100%; }
+    #todos > input:focus {
+      border-bottom-color: #3063d7; }
+  #todos ul {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0; }
+    #todos ul.hide {
+      display: none; }
+    #todos ul li {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 15px; }
+      #todos ul li:first-child {
+        border-radius: 3px 3px 0 0; }
+      #todos ul li:last-child {
+        border-radius: 0 0 3px 3px; }
+      #todos ul li:hover {
+        background: #f5f5f5; }
+        #todos ul li:hover > button {
+          visibility: visible; }
+      #todos ul li > label {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1; }
+        #todos ul li > label > span {
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+          padding-left: 10px; }
+        #todos ul li > label > input {
+          -webkit-appearance: none;
+             -moz-appearance: none;
+                  appearance: none;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-radius: 100%;
+          height: 14px;
+          width: 14px; }
+          #todos ul li > label > input:checked {
+            background-color: #3063d7;
+            border-color: #3063d7; }
+        #todos ul li > label > input:checked + span {
+          color: #999;
+          font-style: italic;
+          text-decoration: line-through; }
+      #todos ul li > button {
+        background-color: transparent;
+        border: 0;
+        border-radius: 3px;
+        color: #999;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 0;
+        visibility: hidden; }
+        #todos ul li > button:hover {
+          color: #f76060; }
+
+
+/*# sourceMappingURL=app.css.map*/
